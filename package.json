@@ -1,6 +1,6 @@
 {
   "name": "@teamthunderfoot/ui",
-  "version": "0.0.110",
+  "version": "0.0.00",
   "source": [
     "src/*.html"
   ],
