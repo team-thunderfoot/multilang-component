@@ -1,0 +1,98 @@
+/*
+    Foundations
+*/
+
+/* Colors */
+
+/* Core Colors */
+$color-a:#1A191D;
+$color-b:#F8F8F8;
+$color-c:#111113;
+$color-d:#FFFFFF;
+
+/* Accent Color */
+$color-e:#78F2C5;
+$color-f:#FF6666;
+$color-g:#9999FF;
+$color-h:#49C5F3;
+
+$color-options: (
+    a:$color-a,
+    b:$color-b,
+    c:$color-c,
+    d:$color-d,
+    e:$color-e,
+    f:$color-f,
+    g:$color-g,
+    h:$color-h,
+);
+
+$colorbg-options: (
+    a:$color-e,
+    b:$color-a,
+);
+
+/* Typography */
+$type-a : 'Red Hat Display', sans-serif;
+$type-b : 'Work Sans', sans-serif;
+
+/* Grid */
+//Container
+$g-container-width: 1300px;
+
+$all: 0;
+$desktop: 1700px;
+$laptop: 1570px;
+$tabletl: 1300px;
+$tabletm: 1024px;
+$tablets: 810px;
+$mobile: 580px;
+$viewport-type: max-width;
+$viewport-layouts: (
+  'all': $all,
+  'desktop': $desktop,
+  'laptop': $laptop,
+  'tabletl': $tabletl,
+  'tabletm': $tabletm,
+  'tablets': $tablets,
+  'mobile': $mobile,
+);
+$columns: 12;
+$gutter-width: 32px;
+$half-gutter-width: $gutter-width * 0.5;
+$gutter-compensation: -1 * $half-gutter-width;
+
+// Use for almost all Uitlities:
+// Display, Aspect Ratio, Flex, Float, Justify, Spacing, Text-align
+$breakpoints-grid: (
+  all: $all,
+  desktop: $desktop,
+  laptop: $laptop,
+  tabletl: $tabletl,
+  tabletm: $tabletm,
+  tablets: $tablets,
+  mobile: $mobile,
+) !default;
+
+/*
+    End Foundations
+*/
+
+// Measure
+$measure: .5rem;
+
+// Time
+$time-a: 0.1s; // Micro-interactions such as button and toggle
+$time-b: 0.3s; // Expansion, system communication, toast
+$time-c: 0.6s; // Background dimming
+
+// border
+$border-radius-a: 4px;
+
+// Ease
+$ease-standard-a: cubic-bezier(0.2, 0, 0.38, 0.9); //productive
+$ease-standard-b: cubic-bezier(0, 0, 0.3, 1); //expresive
+$ease-entrance-a: cubic-bezier(0, 0, 0.38, 0.9); //productive
+$ease-entrance-b: cubic-bezier(0.4, 0.14, 0.3, 1); //expresive
+$ease-exit-a: cubic-bezier(0.2, 0, 1, 0.9); //productive
+$ease-exit-b: cubic-bezier(0.4, 0.14, 1, 1); //expresive

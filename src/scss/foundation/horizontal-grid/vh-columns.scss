@@ -1,0 +1,19 @@
+//* Columns changes with vertical breakpoints
+@mixin build-columns($size, $bkpt) {
+    @for $i from 1 through $columns*2 {
+        .f--vh-col-#{$size}-#{$i} {
+            @media all and (max-height: #{$bkpt}) {
+                width: calc((($g-container-width) / $columns)*$i);
+            }
+            @media all and (max-height: #{$bkpt}) and ($viewport-type: $laptop) {
+                width: calc(((90vw) / $columns)*$i);
+            }
+            @media all and (max-height: #{$bkpt}) and ($viewport-type: $mobile){
+                width: calc(((95vw) / $columns)*$i);
+            }
+        }
+    }
+}
+@each $size, $bkpt in $viewport-layouts {
+    @include build-columns($size, $bkpt);
+}

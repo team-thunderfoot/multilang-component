@@ -1,0 +1,101 @@
+/* Font library */
+
+.f--font-a {
+    @include make-font-a();
+  }
+  
+  .f--font-b {
+    @include make-font-b();
+  }
+  
+  .f--font-c {
+    @include make-font-c();
+  }
+  
+  .f--font-d {
+    @include make-font-d();
+    &--bold {
+      @include make-font-d(600);
+    }
+  }
+  
+  .f--font-e {
+    @include make-font-e();
+  }
+  
+  .f--font-f {
+    @include make-font-f();
+    &--bold {
+      @include make-font-f(600);
+    }
+  }
+  
+  .f--font-g {
+    @include make-font-g();
+  }
+  
+  /* ================================================= Here import the Fonts */
+  
+  // RED HAT DISPLAY
+  
+  @font-face {
+    font-family: "Red Hat Display";
+    src: url("./fonts/redhatdisplay/RedHatDisplay-Bold.eot");
+    src: url("./fonts/redhatdisplay/RedHatDisplay-Bold.eot?#iefix")
+        format("embedded-opentype"),
+      url("./fonts/redhatdisplay/RedHatDisplay-Bold.woff") format("woff"),
+      url("./fonts/redhatdisplay/RedHatDisplay-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  // WORK SANS
+  
+  @font-face {
+    font-family: "Work Sans";
+    src: url("./fonts/worksans/WorkSans-SemiBold.eot");
+    src: url("./fonts/worksans/WorkSans-SemiBold.eot?#iefix")
+        format("embedded-opentype"),
+      url("./fonts/worksans/WorkSans-SemiBold.woff") format("woff"),
+      url("./fonts/worksans/WorkSans-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Work Sans";
+    src: url("./fonts/worksans/WorkSans-SemiBoldItalic.eot");
+    src: url("./fonts/worksans/WorkSans-SemiBoldItalic.eot?#iefix")
+        format("embedded-opentype"),
+      url("./fonts/worksans/WorkSans-SemiBoldItalic.woff") format("woff"),
+      url("./fonts/worksans/WorkSans-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Work Sans";
+    src: url("./fonts/worksans/WorkSans-Light.eot");
+    src: url("./fonts/worksans/WorkSans-Light.eot?#iefix")
+        format("embedded-opentype"),
+      url("./fonts/worksans/WorkSans-Light.woff") format("woff"),
+      url("./fonts/worksans/WorkSans-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Work Sans";
+    src: url("./fonts/worksans/WorkSans-LightItalic.eot");
+    src: url("./fonts/worksans/WorkSans-LightItalic.eot?#iefix")
+        format("embedded-opentype"),
+      url("./fonts/worksans/WorkSans-LightItalic.woff") format("woff"),
+      url("./fonts/worksans/WorkSans-LightItalic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+  }

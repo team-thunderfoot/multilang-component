@@ -1,0 +1,24 @@
+$overflow-properties: (
+  // hidden: hidden,
+);
+@mixin overflow-alignment($overflow-prop, $breakpoints) {
+  @each $breakpoint-name, $breakpoint-value in $breakpoints {
+    @if ($breakpoint-value == 0) {
+      @each $name, $property in $overflow-prop {
+        .overflow--#{$name} {
+          overflow: $property;
+        }
+      }
+    } @else {
+      @media screen and ($viewport-type: $breakpoint-value) {
+        @each $name, $property in $overflow-prop {
+          .overflow--#{$breakpoint-name}-#{$name} {
+            overflow: $property;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include overflow-alignment($overflow-properties, $breakpoints-grid);

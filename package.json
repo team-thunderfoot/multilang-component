@@ -1,0 +1,27 @@
+{
+  "name": "@teamthunderfoot/ui",
+  "version": "0.0.110",
+  "source": [
+    "src/*.html"
+  ],
+  "author": "Thunderfoot",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel -p 3003 ./src/*.html",
+    "build-dev": "parcel build ./src/*.html --no-optimize --public-url ./",
+    "build": "parcel build ./src/*.html --public-url ./",
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "gh-pages": "^5.0.0",
+    "parcel": "^2.8.3",
+    "posthtml-include": "^1.7.4",
+    "sass": "^1.26.12"
+  },
+  "dependencies": {
+    "blazy": "^1.8.2",
+    "gsap": "^3.12.1",
+    "push-dir": "^0.4.1"
+  }
+}

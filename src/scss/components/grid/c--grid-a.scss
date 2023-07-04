@@ -1,0 +1,11 @@
+.c--grid-a {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: $measure * 3;
+    column-gap: $measure * 4;
+
+    & > :first-child {
+        grid-row: span 2;
+    }
+}

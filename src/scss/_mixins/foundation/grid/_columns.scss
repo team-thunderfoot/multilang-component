@@ -1,0 +1,22 @@
+@mixin make-col($i) {
+    $value: calc((100% / $columns)*$i);
+    flex: 0 0 $value;
+    max-width: $value;
+    position: relative;
+    min-height: 1px;
+    padding-right: $half-gutter-width;
+    padding-left: $half-gutter-width;
+    transition: $time-b;
+  }
+  
+  /* Start Responsive Offset */
+  @mixin make-offset($i) {
+    $value: calc((100% / $columns)*$i);
+    margin-left: $value;
+    transition: $time-b;
+  }
+  
+  /* Start Responsive Order */
+  @mixin make-order($i) {
+    order: $i;
+  }

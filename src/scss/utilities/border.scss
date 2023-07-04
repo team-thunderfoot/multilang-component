@@ -1,0 +1,10 @@
+// Border colors
+$border-colors:(
+    // primary : $color-a,
+);
+/*Basic Loop Colors */
+@each $color-name, $color in $color-options {
+    .border--#{$color-name}{
+       border:1px solid $color;
+    }
+}

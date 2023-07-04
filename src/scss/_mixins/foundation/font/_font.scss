@@ -1,0 +1,97 @@
+@mixin make-font-a {
+    font-family: $type-a;
+    letter-spacing: normal;
+    line-height: normal;
+    font-weight: 700;
+    /* font size should be last element if possible, so 
+      when we changed it on mobile it's easier to see.*/
+    font-size: 5.3125rem;
+    @media all and ($viewport-type: $tabletl) {
+      font-size: 3.125rem;
+    }
+    @media all and ($viewport-type: $mobile) {
+      font-size: 2.125rem;
+    }
+  }
+  @mixin make-font-b {
+    font-family: $type-a;
+    letter-spacing: normal;
+    line-height: 3.94rem;
+    font-weight: 700;
+    font-size: 3.125rem;
+    @media all and ($viewport-type: $tabletl) {
+      line-height: 2.68rem;
+      font-size: 2.25rem;
+    }
+    @media all and ($viewport-type: $mobile) {
+      line-height: normal;
+      font-size: 1.75rem;
+    }
+  }
+  @mixin make-font-c {
+    font-family: $type-a;
+    letter-spacing: normal;
+    line-height: 2.1875rem;
+    font-weight: 400;
+    font-size: 1.625rem;
+    
+    @media all and ($viewport-type: $tablets) {
+      font-size: 1.375rem;
+      line-height: 1.3;
+    }
+  }
+  @mixin make-font-d($weight: 300, $style: normal) {
+    font-family: $type-b;
+    font-weight: $weight;
+    letter-spacing: normal;
+    line-height: 2.0625rem;
+    font-style: $style;
+    font-size: 1.375rem;
+    @media all and ($viewport-type: $tablets) {
+      line-height: 1.75rem;
+      font-size: 1.25rem;
+    }
+  }
+  @mixin make-font-e {
+    font-family: $type-a;
+    line-height: 1.325rem;
+    // line-height: 1.1875rem;
+    letter-spacing: normal;
+    font-weight: 700;
+    font-size: 1.25rem;
+    /*this font does not have responsive option */
+  }
+  @mixin make-font-f($weight: 300, $style: normal, $important: false) {
+    @if $important {
+      font-family: $type-b !important;
+      font-weight: $weight !important;
+      line-height: 1.5rem !important;
+      letter-spacing: normal !important;
+      font-style: $style !important;
+      font-size: 1rem !important;
+    } @else {
+      font-family: $type-b;
+      font-weight: $weight;
+      line-height: 1.5rem;
+      letter-spacing: normal;
+      font-style: $style;
+      font-size: 1rem;
+    }
+    /*this font does not have responsive option */
+  }
+  @mixin make-font-g($weight: 300, $important: false) {
+    @if $important {
+      font-family: $type-b !important;
+      font-weight: $weight !important;
+      line-height: 1rem !important;
+      letter-spacing: normal !important;
+      font-size: 0.75rem !important;
+    } @else {
+      font-family: $type-b;
+      font-weight: $weight;
+      line-height: 1rem;
+      letter-spacing: normal;
+      font-size: 0.75rem;
+    }
+    /*this font does not have responsive option */
+  }

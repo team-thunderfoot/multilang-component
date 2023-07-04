@@ -1,0 +1,15 @@
+@mixin make-container () {
+    margin: 0 auto;
+    padding-right: $half-gutter-width;
+    padding-left: $half-gutter-width;
+  }
+  
+  @mixin make-container-fluid () {
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+  
+  @mixin make-container-fluid-responsive () {
+    margin: 0;
+    max-width: 100%;
+  }
