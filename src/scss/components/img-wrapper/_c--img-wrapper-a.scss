@@ -1,0 +1,15 @@
+.c--img-wrapper-a{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: $measure*4;
+    justify-content: space-between;
+    align-items: center;
+    &__media{
+        width: calc((100% / 8) - #{$measure*2});
+        display: block;
+        filter: brightness(0);
+        @media all and ($viewport-type: $tablets) {
+            width: calc((100% / 4) - #{$measure*2});
+        }
+    }
+}

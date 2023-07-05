@@ -2590,4 +2590,24 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   }
 }
 
+.c--img-wrapper-a {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 2rem;
+  display: flex;
+}
+
+.c--img-wrapper-a__media {
+  width: calc(12.5% - 1rem);
+  filter: brightness(0);
+  display: block;
+}
+
+@media (max-width: 810px) {
+  .c--img-wrapper-a__media {
+    width: calc(25% - 1rem);
+  }
+}
+
 /*# sourceMappingURL=404.ce1d6491.css.map */

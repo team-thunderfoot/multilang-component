@@ -1,0 +1,30 @@
+.c--btn-a{
+    display: inline-block;
+    padding: $measure $measure * 3;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(map-get($color-options, a), map-get($color-options, a));
+    background-repeat: no-repeat;
+    background-size: 100% 0px;
+    background-position: bottom left;
+    border-radius: 0;
+    border-color: map-get($color-options, a);
+    border-width: 1px;
+    border-style: solid;
+    color: map-get($color-options, a);
+    @extend .f--font-f;
+    transition: border-color $time-b $ease-standard-a, color $time-b $ease-standard-a, background $time-b $ease-standard-a, background-size $time-b $ease-standard-a;
+    @media all and ($viewport-type: $mobile) {
+        display: block;
+        width: 100%;
+    }
+    @media (hover: hover) {
+        &:hover,
+        &:focus,
+        &:active {
+            background-size: 100% 100%;
+            border-color: map-get($color-options, a);
+            color: map-get($color-options, b);
+        }
+    }
+}

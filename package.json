@@ -1,5 +1,5 @@
 {
-  "name": "@teamthunderfoot/ui",
+  "name": "@teamthunderfoot/multilang-component",
   "version": "0.0.00",
   "source": [
     "src/*.html"
@@ -20,8 +20,9 @@
     "sass": "^1.26.12"
   },
   "dependencies": {
+    "@andresclua/debounce-throttle": "^0.0.82",
     "blazy": "^1.8.2",
-    "gsap": "^3.12.1",
+    "gsap": "file:gsap-bonus.tgz",
     "push-dir": "^0.4.1"
   }
 }
