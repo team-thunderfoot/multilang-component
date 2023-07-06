@@ -618,7 +618,9 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _gsap = require("gsap");
 var _gsapDefault = parcelHelpers.interopDefault(_gsap);
+// import { GSDevTools } from 'gsap';
 var _scrambleTextPlugin = require("gsap/ScrambleTextPlugin");
+// gsap.registerPlugin(GSDevTools);
 var _debounceThrottle = require("@andresclua/debounce-throttle");
 (0, _gsapDefault.default).registerPlugin((0, _scrambleTextPlugin.ScrambleTextPlugin));
 class Multilang {
@@ -644,12 +646,13 @@ class Multilang {
             // console.log('height ' + this.height);
             this.lineHeight = style.getPropertyValue("line-height");
             // console.log('lineHeight ' + this.lineHeight);
-            this.minHeight = "calc(" + this.height + "px + " + this.lineHeight + "*2)";
+            this.extraLines = section.getAttribute("data-extra-lines");
+            this.minHeight = "calc(" + this.height + "px + " + this.lineHeight + "*" + this.extraLines + ")";
             section.style.minHeight = this.minHeight;
         });
     }
     multilang() {
-        if (this.DOM.textContainer) this.DOM.textContainer.forEach((section)=>{
+        if (this.DOM.textContainer) this.DOM.textContainer.forEach((section, i)=>{
             this.text = section.getAttribute("data-words");
             this.textElement = this.text.split(",,");
             var tl = (0, _gsapDefault.default).timeline({
@@ -661,7 +664,7 @@ class Multilang {
                 repeatDelay: 2
             });
             this.textElement.forEach((element, index)=>{
-                tl.to(this.DOM.textContainer, {
+                tl.to(section, {
                     duration: 2,
                     delay: index == 0 ? 0 : 4,
                     scrambleText: {
@@ -669,7 +672,7 @@ class Multilang {
                         chars: "terra",
                         revealDelay: 1,
                         tweenLength: true,
-                        newClass: this.getClass(index)
+                        newClass: i == 0 || i == 1 ? this.getClass(index) : ""
                     }
                 });
             });
@@ -678,13 +681,19 @@ class Multilang {
     }
     getClass(index) {
         switch(index){
-            case 0:
-                return "f--color-g";
-            case 1:
-                return "f--color-h";
-            case 2:
-                return "f--color-f";
+            // case 0:
+            //     return 'f--color-g'
+            // break;
+            // case 1:
+            //     return 'f--color-h'
+            // break;
+            // case 2:
+            //     return 'f--color-f'
+            // break;
             default:
+                if (index % 3 === 0) return "f--color-g";
+                else if ((index - 1) % 3 === 0) return "f--color-h";
+                else if ((index - 2) % 3 === 0) return "f--color-f";
                 break;
         }
     }
